@@ -185,7 +185,8 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
   container-type: inline-size;
   display: grid;
   grid-template-columns: 105px minmax(0, 1fr);
-  grid-template-rows: auto auto;
+  grid-template-rows: min-content min-content;
+  row-gap: 5px;
   align-items: center;
   gap: 5px 18px;
   padding: 20px;
@@ -242,28 +243,29 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
 /* Nama: satu baris, tanpa terpotong */
 .about-person h3 {
   grid-column: 2;
-  grid-row: 1;
-  margin: 0;
-  padding: 0;
-  color: #47116d;
-  font-size: clamp(10px, 4cqw, 15px);
-  font-weight: 750;
-  line-height: 1.3;
-  letter-spacing: -0.35px;
-  text-align: left;
-  white-space: nowrap;
-  overflow: visible;
+    grid-row: 1;
+    margin: 0;
+    padding: 0;
+    color: #47116d;
+    font-size: clamp(12px, 4cqw, 18px);
+    font-weight: 750;
+    line-height: 1.2;
+    letter-spacing: -0.35px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: visible;
 }
 
 /* Jabatan di bawah nama */
 .about-person p {
   grid-column: 2;
-  grid-row: 2;
-  margin: 0;
-  color: #80539b;
-  font-size: 13px;
-  line-height: 1.5;
-  text-align: left;
+    grid-row: 2;
+    margin: 0;
+    padding: 0;
+    color: #80539b;
+    font-size: 13px;
+    line-height: 1.3;
+    text-align: left;
 }
 
 /* Founder */
