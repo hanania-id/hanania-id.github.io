@@ -177,6 +177,141 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
   }
 }
 
+
+/* === HANANIA TEAM CARD - PURPLE PREMIUM STYLE === */
+
+.about-person {
+  position: relative;
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: 105px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 5px 18px;
+  padding: 20px;
+  min-height: 145px;
+  box-sizing: border-box;
+  text-align: left;
+  border: 1.5px solid transparent;
+  border-radius: 22px;
+  background:
+    linear-gradient(#ffffff, #ffffff) padding-box,
+    linear-gradient(135deg, #d8b4fe, #a855d5, #ead7ff) border-box;
+  box-shadow: 0 6px 20px rgba(112, 33, 166, 0.09);
+  overflow: hidden;
+}
+
+/* Motif dekoratif sudut kartu */
+.about-person::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  right: -35px;
+  top: -45px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(196, 145, 244, 0.16),
+    rgba(196, 145, 244, 0)
+  );
+  pointer-events: none;
+}
+
+/* Foto kiri */
+.about-person .person-avatar {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  width: 105px;
+  height: 115px;
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f5eaff;
+  box-shadow: 0 3px 10px rgba(112, 33, 166, 0.12);
+}
+
+.about-person .person-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+/* Nama: satu baris, tanpa terpotong */
+.about-person h3 {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+  padding: 0;
+  color: #47116d;
+  font-size: clamp(10px, 4cqw, 15px);
+  font-weight: 750;
+  line-height: 1.3;
+  letter-spacing: -0.35px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: visible;
+}
+
+/* Jabatan di bawah nama */
+.about-person p {
+  grid-column: 2;
+  grid-row: 2;
+  margin: 0;
+  color: #80539b;
+  font-size: 13px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Founder */
+.team-row.team-founder {
+  display: grid;
+  grid-template-columns: minmax(0, 520px);
+  justify-content: center;
+  width: 100%;
+}
+
+/* Manajemen dan Guru */
+.team-row.team-management,
+.team-row.team-teachers {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+}
+
+.team-row.team-management .about-person,
+.team-row.team-teachers .about-person,
+.team-row.team-founder .about-person {
+  width: 100%;
+  max-width: none;
+}
+
+/* Smartphone */
+@media (max-width: 600px) {
+  .team-row.team-management,
+  .team-row.team-teachers {
+    grid-template-columns: 1fr;
+  }
+
+  .about-person {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 5px 15px;
+    padding: 16px;
+  }
+
+  .about-person .person-avatar {
+    width: 90px;
+    height: 105px;
+  }
+
+  .about-person h3 {
+    font-size: clamp(12px, 4cqw, 16px);
+  }
+}
+
 </style></head><body class="about-page"><div class="top-area"><div class="container"><header class="nav about-nav"><a class="brand" href="index.html"><img alt="Logo Rumah Belajar Hanania" src="assets/logo.png"/><span>Rumah Belajar<br/><b>HANANIA</b></span></a><button aria-controls="nav-links" aria-expanded="false" class="menu-toggle" onclick="const n=document.getElementById('nav-links');const o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">☰ Menu</button><nav aria-label="Navigasi utama" class="links" id="nav-links"><a href="index.html">Beranda</a><a aria-current="page" href="tentang.html">Tentang Kami</a><a href="index.html#program">Program</a><a href="index.html#galeri">Galeri &amp; Prestasi</a><a href="index.html#faq">FAQ</a><a class="cta" href="https://wa.me/6285767384444" rel="noopener" target="_blank">📞 Hubungi Kami ↗</a></nav></header></div></div><main>
 <section class="about-hero"><div class="about-wrap"><div class="about-eyebrow">KENALI HANANIA</div><h1>Tempat Belajar, <span>Tempat Bertumbuh</span></h1><p>Rumah Belajar Hanania hadir untuk mendampingi anak belajar dengan cara yang efektif, menyenangkan, dan ramah anak—melalui kegiatan yang menghargai proses, kebutuhan, dan potensi setiap anak.</p></div></section>
 <section class="about-section"><div class="about-wrap about-grid"><div><div class="about-eyebrow">SIAPA KAMI?</div><h2>Belajar bersama, <span class="accent">bertumbuh bersama.</span></h2><p>Rumah Belajar Hanania merupakan wadah pendampingan belajar bagi anak pra-sekolah dan sekolah dasar. Kami menghadirkan kegiatan akademik dan non-akademik, pengembangan minat dan bakat, serta pembiasaan sikap dan perilaku berbudi luhur.</p><p>Dengan kelompok belajar yang terarah dan pendekatan yang hangat, kami berupaya menciptakan suasana yang membuat anak nyaman untuk mencoba, bertanya, dan berkembang.</p></div><img alt="Suasana kegiatan belajar di Rumah Belajar Hanania" class="about-photo" loading="lazy" src="assets/foto-awal-kbm-hanania.jpeg"/></div></section>
