@@ -340,6 +340,136 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
     align-self: start;
     margin-top: 0;
 }
+
+/* ===== PERBAIKAN VISI & MISI ===== */
+
+.about-values {
+    gap: 22px;
+    align-items: stretch;
+    margin-top: 28px;
+}
+
+.about-values .about-panel {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 34px 32px;
+    border: 1px solid rgba(153, 91, 190, 0.18);
+    box-shadow: 0 12px 30px rgba(93, 48, 125, 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.about-values .about-panel:first-child {
+    background:
+        radial-gradient(circle at 95% 5%, rgba(255,255,255,0.45), transparent 35%),
+        linear-gradient(135deg, #f0ddff, #e5cafa);
+    border-color: #d9b4f1;
+}
+
+.about-values .about-panel:last-child {
+    background:
+        radial-gradient(circle at 95% 5%, rgba(255,255,255,0.55), transparent 35%),
+        linear-gradient(135deg, #fff4d6, #ffedbd);
+    border-color: #f1dca5;
+}
+
+.about-values .about-eyebrow {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    color: #9820c5;
+}
+
+.about-values .about-panel h2 {
+    font-size: clamp(25px, 3vw, 36px);
+    line-height: 1.2;
+    margin: 0 0 20px;
+    color: #35104f;
+}
+
+.about-values .about-panel p {
+    text-align: left;
+    text-justify: auto;
+    line-height: 1.85;
+    font-size: 16px;
+    color: #35104f;
+}
+
+.about-values .about-panel:first-child p {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.about-values .about-panel ol {
+    list-style: none;
+    counter-reset: misi;
+    padding: 0;
+    margin: 0;
+}
+
+.about-values .about-panel li {
+    counter-increment: misi;
+    position: relative;
+    padding-left: 43px;
+    margin: 17px 0;
+    line-height: 1.7;
+    color: #35104f;
+}
+
+.about-values .about-panel li::before {
+    content: counter(misi);
+    position: absolute;
+    left: 0;
+    top: 1px;
+    width: 29px;
+    height: 29px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #9820c5;
+    color: white;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 4px 10px rgba(152, 32, 197, 0.2);
+}
+
+@media (hover: hover) {
+    .about-values .about-panel:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 17px 35px rgba(93, 48, 125, 0.15);
+    }
+}
+
+@media (max-width: 760px) {
+    .about-values {
+        gap: 17px;
+        margin-top: 22px;
+    }
+
+    .about-values .about-panel {
+        padding: 27px 23px;
+        border-radius: 25px;
+    }
+
+    .about-values .about-panel h2 {
+        font-size: 27px;
+        margin-bottom: 16px;
+    }
+
+    .about-values .about-panel:first-child p {
+        font-size: 17px;
+    }
+
+    .about-values .about-panel p,
+    .about-values .about-panel li {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+}
+
 </style></head><body class="about-page"><div class="top-area"><div class="container"><header class="nav about-nav"><a class="brand" href="index.html"><img alt="Logo Rumah Belajar Hanania" src="assets/logo.png"/><span>Rumah Belajar<br/><b>HANANIA</b></span></a><button aria-controls="nav-links" aria-expanded="false" class="menu-toggle" onclick="const n=document.getElementById('nav-links');const o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">☰ Menu</button><nav aria-label="Navigasi utama" class="links" id="nav-links"><a href="index.html">Beranda</a><a aria-current="page" href="tentang.html">Tentang Kami</a><a href="index.html#program">Program</a><a href="index.html#galeri">Galeri &amp; Prestasi</a><a href="index.html#faq">FAQ</a><a class="cta" href="https://wa.me/6285767384444" rel="noopener" target="_blank">📞 Hubungi Kami ↗</a></nav></header></div></div><main>
 <section class="about-hero"><div class="about-wrap"><div class="about-eyebrow">KENALI HANANIA</div><h1>Tempat Belajar, <span>Tempat Bertumbuh</span></h1><p>Rumah Belajar Hanania hadir untuk mendampingi anak belajar dengan cara yang efektif, menyenangkan, dan ramah anak—melalui kegiatan yang menghargai proses, kebutuhan, dan potensi setiap anak.</p></div></section>
 <section class="about-section"><div class="about-wrap about-grid"><div><div class="about-eyebrow">SIAPA KAMI?</div><h2>Belajar bersama, <span class="accent">bertumbuh bersama.</span></h2><p>Rumah Belajar Hanania merupakan wadah pendampingan belajar bagi anak pra-sekolah dan sekolah dasar. Kami menghadirkan kegiatan akademik dan non-akademik, pengembangan minat dan bakat, serta pembiasaan sikap dan perilaku berbudi luhur.</p><p>Dengan kelompok belajar yang terarah dan pendekatan yang hangat, kami berupaya menciptakan suasana yang membuat anak nyaman untuk mencoba, bertanya, dan berkembang.</p></div><img alt="Suasana kegiatan belajar di Rumah Belajar Hanania" class="about-photo" loading="lazy" src="assets/foto-awal-kbm-hanania.jpeg"/></div></section>
