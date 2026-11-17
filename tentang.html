@@ -494,6 +494,126 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
   content: none !important;
 }
 
+
+/* HANANIA — MODERN HERITAGE VISION & MISSION */
+
+.about-values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.about-values .about-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 42px 38px;
+  border-radius: 30px;
+  box-shadow: 0 14px 35px rgba(75, 30, 100, 0.09);
+}
+
+.about-values .vision-card {
+  background: linear-gradient(145deg, #f4e5ff, #e8cafa);
+  border: 1px solid #d9a8f2;
+}
+
+.about-values .mission-card {
+  background: linear-gradient(145deg, #fff9e9, #ffedbd);
+  border: 1px solid #efd28c;
+}
+
+.about-values .about-eyebrow {
+  color: #a126c6;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 4px;
+  margin-bottom: 14px;
+}
+
+.about-values .about-panel h2 {
+  color: #39104f;
+  font-size: 34px;
+  line-height: 1.2;
+  margin: 0 0 24px;
+}
+
+.about-values .vision-statement {
+  color: #39104f;
+  font-size: 23px;
+  line-height: 1.65;
+  font-weight: 600;
+  margin: 0;
+}
+
+.about-values .mission-list {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: grid;
+  gap: 19px;
+}
+
+.about-values .mission-list li {
+  position: relative;
+  list-style: none;
+  border-left: 4px solid #c58be0;
+  padding: 8px 0 8px 22px;
+  margin: 0;
+  color: #39104f;
+  font-size: 18px;
+  line-height: 1.65;
+}
+
+.about-values .mission-list li::before {
+  content: none !important;
+}
+
+.about-values .vision-card::after,
+.about-values .mission-card::after {
+  content: "";
+  position: absolute;
+  width: 125px;
+  height: 125px;
+  right: -35px;
+  bottom: -40px;
+  border: 1px solid rgba(161, 38, 198, 0.13);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.about-values .mission-card::after {
+  border-color: rgba(190, 135, 35, 0.18);
+}
+
+@media (max-width: 760px) {
+  .about-values {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .about-values .about-panel {
+    padding: 30px 25px;
+    border-radius: 25px;
+  }
+
+  .about-values .about-panel h2 {
+    font-size: 27px;
+  }
+
+  .about-values .vision-statement {
+    font-size: 19px;
+  }
+
+  .about-values .mission-list {
+    gap: 13px;
+  }
+
+  .about-values .mission-list li {
+    font-size: 16px;
+    padding-left: 17px;
+  }
+}
+
 </style></head><body class="about-page"><div class="top-area"><div class="container"><header class="nav about-nav"><a class="brand" href="index.html"><img alt="Logo Rumah Belajar Hanania" src="assets/logo.png"/><span>Rumah Belajar<br/><b>HANANIA</b></span></a><button aria-controls="nav-links" aria-expanded="false" class="menu-toggle" onclick="const n=document.getElementById('nav-links');const o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">☰ Menu</button><nav aria-label="Navigasi utama" class="links" id="nav-links"><a href="index.html">Beranda</a><a aria-current="page" href="tentang.html">Tentang Kami</a><a href="index.html#program">Program</a><a href="index.html#galeri">Galeri &amp; Prestasi</a><a href="index.html#faq">FAQ</a><a class="cta" href="https://wa.me/6285767384444" rel="noopener" target="_blank">📞 Hubungi Kami ↗</a></nav></header></div></div><main>
 <section class="about-hero"><div class="about-wrap"><div class="about-eyebrow">KENALI HANANIA</div><h1>Tempat Belajar, <span>Tempat Bertumbuh</span></h1><p>Rumah Belajar Hanania hadir untuk mendampingi anak belajar dengan cara yang efektif, menyenangkan, dan ramah anak—melalui kegiatan yang menghargai proses, kebutuhan, dan potensi setiap anak.</p></div></section>
 <section class="about-section"><div class="about-wrap about-grid"><div><div class="about-eyebrow">SIAPA KAMI?</div><h2>Belajar bersama, <span class="accent">bertumbuh bersama.</span></h2><p>Rumah Belajar Hanania merupakan wadah pendampingan belajar bagi anak pra-sekolah dan sekolah dasar. Kami menghadirkan kegiatan akademik dan non-akademik, pengembangan minat dan bakat, serta pembiasaan sikap dan perilaku berbudi luhur.</p><p>Dengan kelompok belajar yang terarah dan pendekatan yang hangat, kami berupaya menciptakan suasana yang membuat anak nyaman untuk mencoba, bertanya, dan berkembang.</p></div><img alt="Suasana kegiatan belajar di Rumah Belajar Hanania" class="about-photo" loading="lazy" src="assets/foto-awal-kbm-hanania.jpeg"/></div></section>
