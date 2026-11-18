@@ -72,7 +72,12 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
 .about-values{display:grid;grid-template-columns:1fr 1fr;gap:20px}
 .about-values .about-panel:first-child{background:#f2e1ff}.about-values .about-panel:last-child{background:#fff1cf}
 .about-values ul{padding-left:21px;line-height:1.85}
-.about-face{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:25px}
+.about-face{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:24px;
+margin-top:30px;
+}
 .about-face article{text-align:center;padding:19px 12px;border-radius:23px;background:#fff;border:1px solid #ead7f4}
 .about-face img{width:100%;max-width:135px;height:110px;object-fit:contain}
 .about-face h3{margin:7px 0}.about-face p{font-size:14px;margin:0}
@@ -83,7 +88,7 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
 .about-cta{text-align:center;background:linear-gradient(125deg,#ecd0fa,#ffe5f5);padding:60px 20px;border-radius:30px}
 .about-cta p{max-width:640px;margin:0 auto 23px}
 .about-nav .links a[aria-current=page]{color:#a126c6;font-weight:900}
-@media(max-width:760px){.about-hero{padding:46px 0}.about-section{padding:45px 0}.about-grid,.about-values{grid-template-columns:1fr}.about-timeline{grid-template-columns:1fr}.about-face{grid-template-columns:repeat(2,1fr)}.about-team{grid-template-columns:repeat(2,1fr)}.about-panel{padding:22px}.about-cta{border-radius:22px}}
+@media(max-width:760px){.about-hero{padding:46px 0}.about-section{padding:45px 0}.about-grid,.about-values{grid-template-columns:1fr}.about-timeline{grid-template-columns:1fr}.about-face{grid-template-columns:1fr}.about-team{grid-template-columns:repeat(2,1fr)}.about-panel{padding:22px}.about-cta{border-radius:22px}}
 @media(max-width:390px){.about-team{grid-template-columns:1fr}}
 
 /* Penyempurnaan halaman Tentang Kami — 2026 */
