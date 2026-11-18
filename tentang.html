@@ -84,7 +84,6 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
   position: relative;
   isolation: isolate;
   overflow: hidden;
-  min-height: 390px;
   text-align: left;
   padding: 30px 32px;
   border-radius: 24px;
@@ -93,19 +92,14 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
 }
 
 .about-face img {
-    position: absolute;
-    z-index: 0;
-    top: 50%;
-    left: 50%;
-    right: auto;
-    bottom: auto;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    height: 80%;
-    max-width: none;
-    object-fit: contain;
-    opacity: 0.13;
-    pointer-events: none;
+  position: static;
+  display: block;
+  width: 85px;
+  height: 85px;
+  max-width: none;
+  object-fit: contain;
+  opacity: 1;
+  margin: 0 0 14px;
 }
 
 .about-face h3 {
