@@ -306,6 +306,38 @@
       font-size: 13px;
     }
 
+/* HERO LAYOUT */
+.hero-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-illustration {
+  flex: 0 0 38%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: -1;
+}
+
+.hero-mascot {
+  display: block;
+  width: 100%;
+  max-width: 380px;
+  height: auto;
+  object-fit: contain;
+}
+
     /* RESPONSIVE */
     @media (max-width: 760px) {
       .nav {
@@ -364,6 +396,31 @@
         border-radius: 22px;
       }
     }
+    
+/* FAQ HERO - MOBILE */
+@media (max-width: 760px) {
+  .hero-inner {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-illustration {
+    order: 0;
+    flex: none;
+    width: 100%;
+  }
+
+  .hero-mascot {
+    max-width: 230px;
+    margin: 0 auto;
+  }
+}
+
   </style>
 </head>
 
