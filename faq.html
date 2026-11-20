@@ -1,0 +1,630 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Temukan jawaban atas pertanyaan seputar Rumah Belajar Hanania, program pembelajaran, asesmen, pendaftaran, dan layanan kami.">
+  <title>FAQ | Rumah Belajar HANANIA</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      color: #35134f;
+      background: #f8edff;
+    }
+
+    a { text-decoration: none; }
+
+    .container {
+      width: min(1120px, 90%);
+      margin: auto;
+    }
+
+    /* NAVIGASI */
+    .top-area {
+      background: #fff;
+      border-bottom: 1px solid #ead8f5;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #35134f;
+      font-size: 15px;
+      line-height: 1.2;
+      font-weight: 700;
+    }
+
+    .brand img {
+      width: 43px;
+      height: 43px;
+      object-fit: contain;
+    }
+
+    .brand b {
+      display: block;
+      color: #8e25c0;
+      letter-spacing: 1px;
+    }
+
+    .links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .links a {
+      color: #55336e;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .links a[aria-current="page"] {
+      color: #a126c6;
+    }
+
+    .links .cta {
+      background: #8d24bd;
+      color: white;
+      padding: 11px 19px;
+      border-radius: 30px;
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: #f1e2fb;
+      color: #5b1685;
+      padding: 10px 15px;
+      border-radius: 12px;
+      font: inherit;
+      font-weight: 800;
+    }
+
+    /* HERO */
+    .hero {
+      padding: 75px 20px 45px;
+      text-align: center;
+      background: linear-gradient(145deg, #f7e9ff, #f1ddff);
+    }
+
+    .eyebrow {
+      color: #a126c6;
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      margin: 12px 0 15px;
+      font-size: clamp(34px, 5vw, 57px);
+      line-height: 1.15;
+      font-weight: 900;
+      color: #35134f;
+    }
+
+    .accent {
+      color: #a126c6;
+      text-shadow: 2px 3px 0 #ffd94d;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 0 auto;
+      color: #765987;
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    /* PENCARIAN */
+    .search-area {
+      max-width: 650px;
+      margin: 35px auto 0;
+      position: relative;
+    }
+
+    .search-area input {
+      width: 100%;
+      padding: 17px 22px;
+      border: 1px solid #dfb9f4;
+      border-radius: 18px;
+      background: white;
+      font: inherit;
+      font-size: 15px;
+      outline: none;
+      box-shadow: 0 8px 25px rgba(89, 35, 120, .07);
+    }
+
+    .search-area input:focus {
+      border-color: #ad52d7;
+      box-shadow: 0 0 0 3px rgba(173, 82, 215, .12);
+    }
+
+    /* KONTEN FAQ */
+    .faq-section {
+      padding: 35px 0 85px;
+    }
+
+    .faq-group {
+      margin: 30px 0 38px;
+    }
+
+    .group-title {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      color: #7020a4;
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    .group-title::before {
+      content: "";
+      width: 7px;
+      height: 27px;
+      border-radius: 10px;
+      background: linear-gradient(#b34bdb, #7c24b0);
+    }
+
+    .faq-item {
+      background: white;
+      border: 1px solid #e5c4f5;
+      border-radius: 17px;
+      margin: 12px 0;
+      overflow: hidden;
+      box-shadow: 0 5px 18px rgba(89, 35, 120, .045);
+      transition: border-color .2s, box-shadow .2s;
+    }
+
+    .faq-item[open] {
+      border-color: #bd7bdf;
+      box-shadow: 0 8px 22px rgba(89, 35, 120, .09);
+    }
+
+    .faq-item summary {
+      position: relative;
+      padding: 20px 55px 20px 23px;
+      cursor: pointer;
+      list-style: none;
+      color: #651b99;
+      font-size: 16px;
+      font-weight: 900;
+      line-height: 1.5;
+    }
+
+    .faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-item summary::after {
+      content: "+";
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 27px;
+      height: 27px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #f3e5fc;
+      color: #8d24bd;
+      font-size: 21px;
+      font-weight: 700;
+    }
+
+    .faq-item[open] summary::after {
+      content: "−";
+      background: #8d24bd;
+      color: white;
+    }
+
+    .faq-answer {
+      padding: 0 23px 21px;
+      color: #70577f;
+      font-size: 15px;
+      line-height: 1.8;
+      border-top: 1px solid #f1e4f8;
+    }
+
+    .faq-answer p {
+      margin: 15px 0 0;
+    }
+
+    .faq-answer ul {
+      padding-left: 22px;
+      margin: 10px 0 0;
+    }
+
+    .empty-message {
+      display: none;
+      padding: 30px;
+      text-align: center;
+      color: #765987;
+      background: white;
+      border-radius: 18px;
+    }
+
+    /* CTA */
+    .contact-box {
+      padding: 42px 25px;
+      margin-top: 55px;
+      text-align: center;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #7622a8, #a331c7);
+      color: white;
+    }
+
+    .contact-box h2 {
+      margin: 0 0 10px;
+      font-size: clamp(24px, 4vw, 32px);
+    }
+
+    .contact-box p {
+      margin: 0 auto 23px;
+      max-width: 600px;
+      line-height: 1.7;
+      color: #f5e7ff;
+    }
+
+    .contact-box a {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 30px;
+      background: #fff;
+      color: #7922a8;
+      font-weight: 900;
+    }
+
+    footer {
+      padding: 24px 15px;
+      background: #321247;
+      color: #eadcf4;
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 760px) {
+      .nav {
+        min-height: 68px;
+        flex-wrap: wrap;
+        padding: 12px 0;
+      }
+
+      .menu-toggle { display: block; }
+
+      .links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        padding: 8px 0 12px;
+      }
+
+      .links.open { display: flex; }
+
+      .links a {
+        padding: 13px 10px;
+        border-bottom: 1px solid #f0e3f7;
+      }
+
+      .links .cta {
+        margin-top: 10px;
+        text-align: center;
+      }
+
+      .hero {
+        padding: 55px 15px 35px;
+      }
+
+      .hero p { font-size: 16px; }
+
+      .faq-section { padding: 20px 0 60px; }
+
+      .group-title { font-size: 18px; }
+
+      .faq-item summary {
+        padding: 18px 48px 18px 17px;
+        font-size: 15px;
+      }
+
+      .faq-item summary::after { right: 15px; }
+
+      .faq-answer {
+        padding: 0 17px 18px;
+        font-size: 14px;
+      }
+
+      .contact-box {
+        padding: 35px 20px;
+        border-radius: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-area">
+    <div class="container">
+      <header class="nav">
+        <a class="brand" href="index.html">
+          <img src="assets/logo.png" alt="Logo Rumah Belajar Hanania">
+          <span>Rumah Belajar <b>HANANIA</b></span>
+        </a>
+
+        <button class="menu-toggle"
+          aria-controls="nav-links"
+          aria-expanded="false"
+          onclick="const n=document.getElementById('nav-links');const o=n.classList.toggle('open');this.setAttribute('aria-expanded',o)">
+          ☰ Menu
+        </button>
+
+        <nav class="links" id="nav-links" aria-label="Navigasi utama">
+          <a href="index.html">Beranda</a>
+          <a href="tentang.html">Tentang Kami</a>
+          <a href="program.html">Program</a>
+          <a href="index.html#galeri">Galeri &amp; Prestasi</a>
+          <a href="faq.html" aria-current="page">FAQ</a>
+          <a class="cta" href="https://wa.me/6285767384444" target="_blank" rel="noopener">Hubungi Kami ↗</a>
+        </nav>
+      </header>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Pusat Informasi HANANIA</div>
+      <h1>Ada yang Ingin <span class="accent">Ditanyakan?</span></h1>
+      <p>
+        Temukan jawaban seputar program, kegiatan belajar,
+        asesmen, pendaftaran, dan layanan Rumah Belajar HANANIA.
+      </p>
+
+      <div class="search-area">
+        <input
+          type="search"
+          id="faq-search"
+          placeholder="Cari pertanyaan yang ingin diketahui..."
+          aria-label="Cari pertanyaan FAQ">
+      </div>
+    </section>
+
+    <section class="faq-section">
+      <div class="container" id="faq-content">
+
+        <!-- TENTANG HANANIA -->
+        <div class="faq-group">
+          <h2 class="group-title">Tentang HANANIA</h2>
+
+          <details class="faq-item">
+            <summary>Apa itu Rumah Belajar HANANIA?</summary>
+            <div class="faq-answer">
+              <p>Rumah Belajar HANANIA merupakan lembaga pendampingan belajar anak yang menghadirkan kegiatan pembelajaran efektif, menyenangkan, dan ramah anak. HANANIA berkomitmen membantu anak mengembangkan kemampuan berpikir, keterampilan, dan karakter positif.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apa yang membedakan HANANIA dengan tempat belajar lainnya?</summary>
+            <div class="faq-answer">
+              <p>HANANIA menerapkan pendekatan FACE (Fun, Active, Creative, Effective). Anak didorong untuk belajar dengan gembira, terlibat aktif, mengembangkan kreativitas, serta mencapai tujuan pembelajaran sesuai kemampuan dan tahap perkembangannya.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- PROGRAM -->
+        <div class="faq-group">
+          <h2 class="group-title">Program Pembelajaran</h2>
+
+          <details class="faq-item">
+            <summary>Program belajar apa saja yang tersedia?</summary>
+            <div class="faq-answer">
+              <p>HANANIA menyediakan beberapa pilihan program pembelajaran:</p>
+              <ul>
+                <li>Regular Class</li>
+                <li>Private Class</li>
+                <li>English Class</li>
+                <li>Islamic Class</li>
+              </ul>
+              <p>Informasi lebih lengkap dapat dilihat pada halaman Program.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apakah HANANIA menerima anak Pra-Sekolah dan SD?</summary>
+            <div class="faq-answer">
+              <p>Ya. HANANIA menyediakan pendampingan belajar untuk anak jenjang Pra-Sekolah dan Sekolah Dasar (SD).</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apakah tersedia pembelajaran secara privat?</summary>
+            <div class="faq-answer">
+              <p>Ya. Private Class tersedia bagi anak yang membutuhkan pendampingan belajar secara lebih personal. Materi dan proses pembelajaran disesuaikan dengan kebutuhan serta kemampuan anak.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- KEGIATAN BELAJAR -->
+        <div class="faq-group">
+          <h2 class="group-title">Kegiatan Belajar</h2>
+
+          <details class="faq-item">
+            <summary>Bagaimana metode pembelajaran di HANANIA?</summary>
+            <div class="faq-answer">
+              <p>Pembelajaran dilakukan melalui aktivitas yang bervariasi, seperti permainan edukatif, praktik, tanya jawab, latihan bertahap, dan kegiatan kreatif. Pendampingan disesuaikan dengan kebutuhan serta perkembangan masing-masing anak.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Bagaimana orang tua dapat mengetahui perkembangan belajar anak?</summary>
+            <div class="faq-answer">
+              <p>Orang tua dapat memperoleh informasi mengenai perkembangan belajar anak melalui komunikasi dengan pihak HANANIA dan evaluasi pembelajaran. Khusus peserta Pra-Sekolah, laporan perkembangan juga diberikan melalui rapor.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apakah orang tua boleh melihat langsung lingkungan belajar?</summary>
+            <div class="faq-answer">
+              <p>Tentu saja! Ayah dan Bunda sangat dianjurkan untuk berkunjung langsung ke Rumah Belajar HANANIA. Orang tua dapat mengenal lingkungan belajar, melihat fasilitas, serta berkonsultasi mengenai program yang sesuai dengan kebutuhan anak.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- PENDAFTARAN -->
+        <div class="faq-group">
+          <h2 class="group-title">Pendaftaran &amp; Biaya</h2>
+
+          <details class="faq-item">
+            <summary>Bagaimana cara mendaftarkan anak di HANANIA?</summary>
+            <div class="faq-answer">
+              <p>Orang tua dapat menghubungi Admin HANANIA untuk berkonsultasi dan memperoleh informasi pendaftaran. Setiap calon murid akan mengikuti asesmen awal sebelum ditetapkan sebagai murid aktif.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apakah asesmen awal wajib dilakukan sebelum mendaftar?</summary>
+            <div class="faq-answer">
+              <p>Ya. Setiap calon murid, baik Regular Class maupun Private Class, wajib mengikuti asesmen awal. Asesmen bertujuan mengenali kemampuan, kebutuhan, dan tahap perkembangan anak agar HANANIA dapat merekomendasikan program serta pendekatan pembelajaran yang tepat.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Apakah Trial Class wajib diikuti?</summary>
+            <div class="faq-answer">
+              <p>Tidak. Trial Class merupakan pilihan bagi orang tua yang ingin memberikan kesempatan kepada anak untuk mengenal suasana belajar di HANANIA. Setelah mengikuti asesmen, orang tua juga dapat langsung melanjutkan proses pendaftaran sebagai murid aktif tanpa harus mengikuti Trial Class.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Berapa biaya pendidikan di HANANIA?</summary>
+            <div class="faq-answer">
+              <p>Biaya pendidikan menyesuaikan program yang dipilih. Untuk mendapatkan informasi mengenai Biaya Pembinaan Pendidikan (BPP) dan biaya program lainnya, silakan menghubungi Admin HANANIA.</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- INFORMASI & LAYANAN -->
+        <div class="faq-group">
+          <h2 class="group-title">Informasi &amp; Layanan</h2>
+
+          <details class="faq-item">
+            <summary>Apakah orang tua dapat berkonsultasi sebelum mendaftarkan anak?</summary>
+            <div class="faq-answer">
+              <p>Tentu. Ayah dan Bunda dapat berkonsultasi dengan Admin HANANIA untuk mengenal program, memahami proses asesmen, serta mendiskusikan kebutuhan belajar anak sebelum mengambil keputusan pendaftaran.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Bagaimana cara menghubungi Admin HANANIA?</summary>
+            <div class="faq-answer">
+              <p>Ayah dan Bunda dapat menghubungi Admin HANANIA melalui WhatsApp pada nomor 0857-6738-4444 untuk memperoleh informasi dan bantuan lebih lanjut.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Di mana lokasi Rumah Belajar HANANIA?</summary>
+            <div class="faq-answer">
+              <p>Untuk memperoleh informasi alamat dan petunjuk lokasi terbaru, silakan menghubungi Admin HANANIA melalui WhatsApp. Ayah dan Bunda juga dipersilakan mengatur kunjungan langsung ke lokasi.</p>
+            </div>
+          </details>
+        </div>
+
+        <div class="empty-message" id="empty-message">
+          Pertanyaan yang dicari belum ditemukan. Silakan coba kata kunci lain atau hubungi Admin HANANIA.
+        </div>
+
+        <div class="contact-box">
+          <h2>Masih Ada yang Ingin Ditanyakan?</h2>
+          <p>Tim HANANIA siap membantu Ayah dan Bunda mendapatkan informasi yang dibutuhkan untuk memilih pendampingan belajar yang tepat bagi anak.</p>
+          <a href="https://wa.me/6285767384444" target="_blank" rel="noopener">💬 Konsultasi via WhatsApp</a>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © 2026 Rumah Belajar HANANIA · Seluruh hak dilindungi.
+      <br>
+      Belajar Efektif, Menyenangkan, dan Ramah Anak.
+      <br>
+      <strong>hanania.id</strong>
+    </div>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('faq-search');
+    const faqItems = document.querySelectorAll('.faq-item');
+    const faqGroups = document.querySelectorAll('.faq-group');
+    const emptyMessage = document.getElementById('empty-message');
+
+    searchInput.addEventListener('input', function () {
+      const keyword = this.value.toLowerCase().trim();
+      let totalVisible = 0;
+
+      faqGroups.forEach(group => {
+        let groupVisible = 0;
+
+        group.querySelectorAll('.faq-item').forEach(item => {
+          const matched = item.textContent.toLowerCase().includes(keyword);
+          item.style.display = matched ? '' : 'none';
+
+          if (matched) {
+            groupVisible++;
+            totalVisible++;
+          }
+        });
+
+        group.style.display = groupVisible ? '' : 'none';
+      });
+
+      emptyMessage.style.display = totalVisible ? 'none' : 'block';
+    });
+
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('toggle', function () {
+        if (this.open) {
+          document.querySelectorAll('.faq-item[open]').forEach(other => {
+            if (other !== this) other.open = false;
+          });
+        }
+      });
+    });
+
+    document.querySelectorAll('#nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        const nav = document.getElementById('nav-links');
+        nav.classList.remove('open');
+        document.querySelector('.menu-toggle').setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+</body>
+</html>
