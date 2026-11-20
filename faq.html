@@ -297,14 +297,21 @@
       color: #7922a8;
       font-weight: 900;
     }
+    
+footer {
+  padding: 24px 3%;
+  background: #321247;
+  color: #eadcf4;
+  text-align: left;
+  font-size: 13px;
+}
 
-    footer {
-      padding: 24px 15px;
-      background: #321247;
-      color: #eadcf4;
-      text-align: center;
-      font-size: 13px;
-    }
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
 
 /* HERO LAYOUT */
 .hero-inner {
@@ -419,6 +426,13 @@
     max-width: 230px;
     margin: 0 auto;
   }
+  
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+  }
+
 }
 
   </style>
@@ -634,16 +648,13 @@
       </div>
     </section>
   </main>
-
-  <footer>
-    <div class="container">
-      © 2026 Rumah Belajar HANANIA · Seluruh hak dilindungi.
-      <br>
-      Belajar Efektif, Menyenangkan, dan Ramah Anak.
-      <br>
-      <strong>hanania.id</strong>
-    </div>
-  </footer>
+ 
+<footer>
+  <div class="container">
+    <span>© 2026 Rumah Belajar Hanania · Seluruh hak dilindungi.</span>
+    <span>📚 Belajar Efektif, Menyenangkan, dan Ramah Anak. · <strong>hanania.id</strong></span>
+  </div>
+</footer>
 
   <script>
     const searchInput = document.getElementById('faq-search');
