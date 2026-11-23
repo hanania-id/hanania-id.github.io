@@ -211,6 +211,31 @@
 
       .footer { line-height: 1.8; }
     }
+  footer {
+  background: #321247;
+  color: #f8eaff;
+  padding: 22px 0;
+  font-size: 13px;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+footer strong {
+  color: #ffe64c;
+}
+
+@media (max-width: 950px) {
+  footer .container {
+    justify-content: center;
+    text-align: center;
+  }
+}
   </style>
 </head>
 
