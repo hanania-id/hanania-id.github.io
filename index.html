@@ -161,6 +161,106 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
   }
 }
 
+
+/* TESTIMONI KELUARGA HANANIA */
+.testimonial-section {
+  padding: 75px 0;
+  background: linear-gradient(180deg, #fbf5ff, #f4eaff);
+}
+
+.testimonial-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 38px;
+}
+
+.testimonial-heading h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #321247;
+  margin: 12px 0;
+}
+
+.testimonial-heading .lead {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #594568;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  align-items: start;
+}
+
+.testimonial-card {
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid #eadcf5;
+  border-radius: 22px;
+  box-shadow: 0 8px 24px rgba(80, 40, 110, .10);
+  transition: transform .25s, box-shadow .25s;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 14px 30px rgba(80, 40, 110, .16);
+}
+
+.testimonial-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+}
+
+.testimonial-caption {
+  padding: 16px 15px 18px;
+  text-align: center;
+}
+
+.testimonial-tag {
+  display: inline-block;
+  padding: 7px 13px;
+  border-radius: 30px;
+  background: #f3e4ff;
+  color: #8619b5;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .5px;
+}
+
+.testimonial-caption p {
+  margin: 10px 0 0;
+  color: #49345b;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+@media (max-width: 950px) {
+  .testimonial-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .testimonial-section {
+    padding: 55px 0;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .testimonial-caption {
+    padding: 13px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -234,6 +334,51 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
           Alhamdulillah, Azkya sekarang sudah banyak perubahan. Sudah hampir semua mengenal huruf dan angka, serta sedikit demi sedikit sudah bisa membaca. Saya senang banget melihat perkembangannya.
         </blockquote>
         <div class="testimonial-source">Orang Tua Azkya</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+  
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-heading">
+      <div class="section-kicker">CERITA KELUARGA HANANIA</div>
+      <h2>Kepercayaan yang <span class="accent">Tumbuh Bersama</span></h2>
+      <p class="lead">Setiap perkembangan anak adalah cerita berharga. Terima kasih kepada keluarga Hanania yang telah berbagi pengalaman dan kepercayaannya.</p>
+    </div>
+
+    <div class="testimonial-grid">
+      <article class="testimonial-card">
+        <img src="assets/testimoni-kevin-keyla.webp" alt="Testimoni orang tua Kevin dan Keyla" loading="lazy">
+        <div class="testimonial-caption">
+          <span class="testimonial-tag">Pengalaman Belajar</span>
+          <p>Orang tua Kevin &amp; Keyla</p>
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <img src="assets/testimoni-qiana.webp" alt="Testimoni orang tua Qiana" loading="lazy">
+        <div class="testimonial-caption">
+          <span class="testimonial-tag">Kemandirian Anak</span>
+          <p>Orang tua Qiana</p>
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <img src="assets/testimoni-bima.webp" alt="Testimoni orang tua Bima" loading="lazy">
+        <div class="testimonial-caption">
+          <span class="testimonial-tag">Tanggung Jawab Belajar</span>
+          <p>Orang tua Bima</p>
+        </div>
+      </article>
+
+      <article class="testimonial-card">
+        <img src="assets/testimoni-azkya.webp" alt="Testimoni orang tua Azkya" loading="lazy">
+        <div class="testimonial-caption">
+          <span class="testimonial-tag">Perkembangan Anak</span>
+          <p>Orang tua Azkya</p>
+        </div>
       </article>
     </div>
   </div>
