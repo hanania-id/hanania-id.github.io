@@ -72,6 +72,95 @@ footer{background:#321047;color:#f8e8ff;padding:20px 0;font-size:13px}footer .co
 footer{background:#35104d;color:white;padding:23px 0}footer .container{align-items:center}footer strong{color:#ffe64c}
 @media(max-width:950px){.contact-new .contact-grid{gap:24px}.contact-new .contact-item{padding:13px}.contact-icon{flex-basis:55px;height:56px;font-size:32px}}
 @media(max-width:700px){.icon-3d{height:112px;max-width:180px}.face .icon-3d{height:100px}.contact-new{padding:55px 0 65px}.contact-new .contact-grid{grid-template-columns:1fr;gap:35px}.contact-intro h2{font-size:clamp(2.4rem,9vw,3.7rem)}.contact-intro p{font-size:16px}.contact-new .contact-item{min-height:90px;border-radius:23px}.contact-detail span,.contact-detail a{font-size:15px}}
+
+/* TESTIMONI KELUARGA HANANIA */
+.testimonial-section {
+  padding: 75px 0;
+  background: linear-gradient(180deg, #fbf5ff, #f4e5ff);
+}
+
+.testimonial-heading {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 38px;
+}
+
+.testimonial-heading h2 {
+  color: #321247;
+  font-size: clamp(28px, 4vw, 42px);
+  margin: 12px 0;
+}
+
+.testimonial-heading p {
+  color: #75617f;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+}
+
+.testimonial-card {
+  background: #fff;
+  border: 1px solid #ead4fa;
+  border-radius: 25px;
+  padding: 27px;
+  box-shadow: 0 10px 28px rgba(75, 30, 105, .08);
+}
+
+.testimonial-tag {
+  display: inline-block;
+  color: #8a21b8;
+  background: #f3e2ff;
+  border-radius: 30px;
+  padding: 7px 13px;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 16px;
+}
+
+.testimonial-card blockquote {
+  margin: 0;
+  color: #493354;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.testimonial-card blockquote::before {
+  content: "“";
+  color: #a52bd0;
+  font-size: 32px;
+  font-weight: 900;
+  display: block;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.testimonial-source {
+  color: #8a21b8;
+  font-size: 13px;
+  font-weight: 800;
+  margin-top: 18px;
+}
+
+@media (max-width: 700px) {
+  .testimonial-section {
+    padding: 55px 0;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .testimonial-card {
+    padding: 23px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -105,7 +194,52 @@ footer{background:#35104d;color:white;padding:23px 0}footer .container{align-ite
 <div class="face sky"><strong>C</strong><img class="icon-3d" src="assets/icon-creative.webp" alt="Ilustrasi 3D creative" loading="lazy"><h3>Creative</h3><p>Kreatif, berimajinasi, dan berkarya.</p></div>
 <div class="face mint"><strong>E</strong><img class="icon-3d" src="assets/icon-effective.webp" alt="Ilustrasi 3D effective" loading="lazy"><h3>Effective</h3><p>Belajar terarah, bermakna, dan berhasil.</p></div>
 </div></div></section>
-<section class="section gallery" id="galeri"><div class="container center"><div class="section-kicker">CERITA DARI HANANIA</div><h2>Momen Kecil, <span class="accent">Makna Besar</span></h2><p class="lead">Cuplikan kegiatan nyata anak-anak bersama keluarga Rumah Belajar Hanania.</p></div><div class="container gallery-grid">
+
+<section class="testimonial-section">
+  <div class="container">
+    <div class="testimonial-heading">
+      <div class="section-kicker">CERITA DARI ORANG TUA</div>
+      <h2>Kepercayaan yang <span class="accent">Menguatkan</span></h2>
+      <p>Setiap perkembangan anak adalah kebahagiaan bagi kami. Terima kasih kepada keluarga Hanania yang telah berbagi cerita dan kepercayaannya.</p>
+    </div>
+
+    <div class="testimonial-grid">
+      <article class="testimonial-card">
+        <span class="testimonial-tag">Perkembangan Membaca</span>
+        <blockquote>
+          Alhamdulillah, Keyla sudah mendingan membaca. Kalau didikte mamanya, mengajarinya tidak lagi menarik urat banget. Cara mengajar Kak Ratna cocok dari dulu. Kevin dan Keyla juga langsung nyangkut, padahal belum ada sebulan.
+        </blockquote>
+        <div class="testimonial-source">Orang Tua Kevin & Keyla</div>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-tag">Kemandirian Belajar</span>
+        <blockquote>
+          Terima kasih, Kak Ratna. Qiana makin pintar menghitung. Sekarang dia tidak mau diajarin lagi, katanya Mama lihat saja. Kalau sudah selesai, baru boleh cek PR-nya.
+        </blockquote>
+        <div class="testimonial-source">Orang Tua Qiana</div>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-tag">Tanggung Jawab</span>
+        <blockquote>
+          Sejak sama Kak Ratna, Bima mengerjakan PR-nya sendiri dan tidak mau dibantu. Justru bagus, jadi Bima punya rasa tanggung jawab dan tidak malas belajar.
+        </blockquote>
+        <div class="testimonial-source">Orang Tua Bima</div>
+      </article>
+
+      <article class="testimonial-card">
+        <span class="testimonial-tag">Kemajuan Belajar</span>
+        <blockquote>
+          Alhamdulillah, Azkya sekarang sudah banyak perubahan. Sudah hampir semua mengenal huruf dan angka, serta sedikit demi sedikit sudah bisa membaca. Saya senang banget melihat perkembangannya.
+        </blockquote>
+        <div class="testimonial-source">Orang Tua Azkya</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+  <section class="section gallery" id="galeri"><div class="container center"><div class="section-kicker">CERITA DARI HANANIA</div><h2>Momen Kecil, <span class="accent">Makna Besar</span></h2><p class="lead">Cuplikan kegiatan nyata anak-anak bersama keluarga Rumah Belajar Hanania.</p></div><div class="container gallery-grid">
 <article class="gallery-card"><img src="assets/kebersamaan.jpg" loading="lazy" alt="Kebersamaan keluarga besar Hanania"><h3>🤝 Kebersamaan Hanania</h3></article>
 <article class="gallery-card"><img src="assets/kreatif.jpg" loading="lazy" alt="Kegiatan kreativitas anak"><h3>🎨 Kreativitas Anak</h3></article>
 <article class="gallery-card"><img src="assets/tampil.jpg" loading="lazy" alt="Anak-anak tampil dalam kegiatan Hanania"><h3>🎤 Berani Tampil</h3></article>
